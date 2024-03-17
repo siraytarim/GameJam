@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class colorChange : MonoBehaviour
 {
-    // Nesnenin Renderer bileþeni
+ 
     private Renderer objectRenderer;
 
-    // Kodun baþlangýcýnda çalýþan fonksiyon
+   
     void Start()
     {
-        // Nesnenin Renderer bileþenine eriþim saðlama
+       
         objectRenderer = GetComponent<Renderer>();
 
-        // Eðer nesnenin Renderer bileþeni yoksa uyarý ver
+       
         if (objectRenderer == null)
         {
             Debug.LogWarning("Renderer component not found on object!");
@@ -28,5 +28,5 @@ public class colorChange : MonoBehaviour
         }
     }
 
-    // Herhangi bir tuþa basýldýðýnda çalýþan fonksiyon
+  
 }
