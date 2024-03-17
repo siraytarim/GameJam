@@ -20,7 +20,7 @@ public class Rotation : MonoBehaviour
             {
                 if (hit.collider.gameObject == gameObject)
                 {
-                    // Objeyi belirtilen miktarda döndür
+                   
                     transform.Rotate(0,0,rotationAmount);
                 }
             }
