@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class colorChange : MonoBehaviour
+{
+    // Nesnenin Renderer bileþeni
+    private Renderer objectRenderer;
+
+    // Kodun baþlangýcýnda çalýþan fonksiyon
+    void Start()
+    {
+        // Nesnenin Renderer bileþenine eriþim saðlama
+        objectRenderer = GetComponent<Renderer>();
+
+        // Eðer nesnenin Renderer bileþeni yoksa uyarý ver
+        if (objectRenderer == null)
+        {
+            Debug.LogWarning("Renderer component not found on object!");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "kavanoz")
+        {
+            objectRenderer.material.color = new Color(255,162,0) ;
+        }
+    }
+
+    // Herhangi bir tuþa basýldýðýnda çalýþan fonksiyon
+}
